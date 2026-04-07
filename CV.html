@@ -1,0 +1,79 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6">
+      <div className="max-w-4xl mx-auto space-y-6">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center"
+        >
+          <h1 className="text-4xl font-bold">Nguyễn Thành Đạt</h1>
+          <p className="text-lg text-gray-600">Sinh viên An ninh mạng - Đại học Duy Tân</p>
+          <p className="text-gray-500">Ngày sinh: 16/12/2007</p>
+        </motion.div>
+
+        {/* About */}
+        <Card className="rounded-2xl shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">Giới thiệu</h2>
+            <p>
+              Tôi là sinh viên ngành An ninh mạng với tinh thần luôn nỗ lực học hỏi,
+              chăm chỉ và không ngừng phát triển bản thân trong lĩnh vực công nghệ.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Skills */}
+        <Card className="rounded-2xl shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">Kỹ năng</h2>
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Lập trình C++ cơ bản</li>
+              <li>Tìm kiếm và chọn lọc thông tin</li>
+              <li>Sử dụng các công cụ AI</li>
+              <li>Tinh thần tự học cao</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        {/* Experience */}
+        <Card className="rounded-2xl shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">Kinh nghiệm</h2>
+            <p>
+              Có kinh nghiệm tìm kiếm, phân tích và chọn lọc thông tin phục vụ học tập
+              và lập trình cơ bản.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Certificates */}
+        <Card className="rounded-2xl shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">Chứng chỉ</h2>
+            <ul className="list-disc ml-5">
+              <li>Chứng chỉ AI Google</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        {/* Contact */}
+        <Card className="rounded-2xl shadow-lg">
+          <CardContent className="p-6 text-center">
+            <h2 className="text-2xl font-semibold mb-2">Liên hệ</h2>
+            <p>Email: dat789922@gmail.com
+            <p>Địa chỉ: 82 Hồ Sĩ Tân</p>
+            <p>SĐT: 0364370316</p></p>
+            <Button className="mt-4">Liên hệ ngay</Button>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
